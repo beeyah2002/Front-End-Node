@@ -4,7 +4,7 @@ const app = express();
 var bodyParser = require('body-parser');
 const path = require("path")
 
-const base_url = "http://beeyah.proen.app.ruk-com.cloud/";
+const base_url = "http://node51704-beeyah.proen.app.ruk-com.cloud:11525";
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
@@ -77,6 +77,6 @@ app.get("/delete/:id", async (req,res) =>{
 });
 
 app.listen(8080, () => {
-    console.log(`Server started on port 5500`);
+    console.log(`Server started on port 8080`);
 
 });
