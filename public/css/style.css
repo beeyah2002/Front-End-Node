@@ -151,4 +151,14 @@ form {
   object-fit: contain;
   border-radius: 5px;
   }
+.img{
+   width: 150px; /* รูปภาพจะมีความกว้าง 200 พิกเซล */
+  height: 150px; /* รูปภาพจะมีความสูง 150 พิกเซล */
+  object-fit: contain;
+  border-radius: 5px;
+}
+.left{
+  text-align: center;
+}
+  
   
