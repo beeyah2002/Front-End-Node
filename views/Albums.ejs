@@ -22,7 +22,7 @@
                 <td><%= Albums[i].Albumname %></td>
                 <td><%= Albums[i].Year%></td>
                 <td><%= Albums[i].Song %></td>
-                <td><img src="<%= Albums[i].Pic %>" alt="Album Pic"></td>
+                <td><img src="<%= Albums[i].Pic %>" alt="Album Pic" width="200" height="150"></td>
                 <td class="actions">
                     <a href="/updatealbum/<%= Albums[i].ID %>">Update</a>
                     <a href="/deletealbum/<%= Albums[i].ID %>">Delete</a>
