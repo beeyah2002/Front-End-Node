@@ -22,9 +22,9 @@ body {
   }
   
   th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #171010;
     padding: 12px;
-    text-align: left;
+    text-align: center;
     white-space: pre-wrap;
   }
   
