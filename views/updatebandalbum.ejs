@@ -9,7 +9,7 @@
 <body>
     <body>
         <h1>Update Band And Album</h1>
-        <form method="post" action="/updatebandalbum/<%= Bandalbum.bandID %>">
+        <form method="post" action="/updatebandalbum/<%= Bandalbum.ID %>">
             <label for="bandID">bandID</label>
             <input type="text" id="bandID" name="bandID" value="<%= Bandalbum.bandID %>">
             <br>
@@ -19,7 +19,7 @@
             <input type="submit" value="Update">
         </form>
         <div class="middle">
-            <a href="/Bandalbum/<%= Bandalbum.ID %>">View</a>
+            
             <a href="/Deletebandalbum/<%= Bandalbum.ID %>">Delete</a>
             <a href="/">Back to List</a>
         </div>
