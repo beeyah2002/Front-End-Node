@@ -4,7 +4,7 @@ const app = express();
 var bodyParser = require('body-parser');
 const path = require("path")
 
-const base_url = "http://localhost:3000";
+const base_url = "http://localhost:7000";
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", async (req,res) => {
     try {
-        const response = await axios.get(base_url + '/books');
+        const response = await axios.get(base_url + '/Band');
         res.render("books", { books: response.data})
     }catch (err) {
         console.log(err);
@@ -46,7 +46,7 @@ app.post("/create", async (req,res) =>{
     }
 });
 
-app.get("/update/:id", async (req,res)=>{
+app.get("/updatemember/:id", async (req,res)=>{
     try {
         const response = await axios.get(base_url + "/books/" + req.params.id);
         res.render("update", { book: response.data});
@@ -56,7 +56,7 @@ app.get("/update/:id", async (req,res)=>{
     }
 });
 
-app.post("/update/:id", async (req,res) =>{
+app.post("/updatemember/:id", async (req,res) =>{
     try {
         const data = { title: req.body.title, author: req.body.author};
         await axios.put(base_url + '/books/' + req.params.id, data);

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Album</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1> Band and album</h1>
+    <table class="Treatment-table">
+    <tr>
+        
+        <th>BandID</th>
+        <th>Band Picture</th>
+        <th>AlbumID</th>
+        <th>Album Picture</th>
+        
+        
+    </tr>
+    <tr>
+        
+        <td><%= Bandalbum.bandID %></td>
+        <td><%= Band[Bandalbums[i].bandID].Pic %></td>
+        <td><%= Bandalbum.albumID %></td>
+        <td><%= Album[Bandalbums[i].albumID].Albumname %></td>
+        
+        
+    </tr>
+</table>
+<div class="link-center">
+    <a href="/updateTreatment/<%= Bandalbum.ID %>">Edit</a>
+    <a href="/updateTreatment/<%= Bandalbum.ID %>">Delete</a>
+    <a href="/">Back to List</a>
+</div>
+</body>
+</html>

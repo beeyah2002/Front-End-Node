@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Album</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <body>
+        <h1>Create Album</h1>
+        <form method="post" action="/createalbum">
+            <label for="Albumname">Album Name</label>
+            <input type="text" id="Albumname" name="Albumname">
+            <br>
+            <label for="Year">Year</label>
+            <input type="text" id="Year" name="Year">
+            <br>
+            <label for="Song">Song</label>
+            <input type="text" id="Song" name="Song">
+            <br>
+            <label for="Pic">Pic</label>
+            <input type="file" id="Pic" name="Pic" accept="image/*">
+            <br>
+            <input type="submit" value="Create">
+            <br>
+        </form>
+        <div class="middle">
+            <a href="/">Back to List</a>
+            </div>
+    </body>
+    <script>
+        document.getElementById('Pic').addEventListener('change', function (e) {
+            var preview = document.getElementById('preview');
+            preview.style.display = 'block';
+            preview.src = URL.createObjectURL(e.target.files[0]);
+        });
+    </script>
+    
+    </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Create Bands</h1>
+    <form method="post" action="/createBand">
+        <label for="Name">Name</label>
+        <input type="text" id="Name" name="Name">
+        <br>
+        <label for="Genre">Genre</label>
+        <input type="text" id="Genre" name="Genre">
+        <br>
+        <label for="FormationYear">Formation Year</label>
+        <input type="text" id="FormationYear" name="FormationYear">
+        <br>
+        <label for="Member">Member</label>
+        <input type="text" id="Member" name="Member">
+        <br>
+        <label for="Pic">Pic</label>
+        <input type="file" id="Pic" name="Pic" accept="image/*">
+        <br>
+        <input type="submit" value="Create">
+        <br>
+    </form>
+    <div class="middle">
+        <a href="/">Back to List</a>
+    </div>
+</body>
+<script>
+    document.getElementById('Pic').addEventListener('change', function (e) {
+        var preview = document.getElementById('preview');
+        preview.style.display = 'block';
+        preview.src = URL.createObjectURL(e.target.files[0]);
+    });
+</script>
+
+</html>

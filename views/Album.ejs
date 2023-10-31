@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<body>
+    <h1>View Album</h1>
+    <table class="Patient-table">
+        <tr>
+            
+            <th>Name</th>
+            <th>Year</th>
+            <th>Song</th>
+            <th>Pic</th>
+        </tr>
+        <tr>
+            
+            <td><%= Album.Albumname %></td>
+            <td><%= Album.Year %></td>
+            <td><%= Album.Song %></td>
+            <td><img onclick="openLightbox(this)" src="<%= Album.Pic %>" alt="Album Pic"></td>
+        </tr>
+    </table>
+    <div class="link-center">
+        <a href="/updatealbum/<%= Album.ID %>">Edit</a>
+        <a href="/deletealbum/<%= Album.ID %>">Delete</a>
+        <div class="middle">
+            <a href="/">Back to List</a>
+            </div>
+        
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="<%= Album.Pic %>" alt="Album Pic">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+
+            lightbox.style.display = 'flex';
+            lightboxImg.src = element.src;
+
+            window.addEventListener('wheel', zoomImage);
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            window.removeEventListener('wheel', zoomImage);
+        }
+
+        function zoomImage(event) {
+            var lightboxImg = document.getElementById('lightbox-img');
+            var delta = event.deltaY || -event.wheelDelta || event.detail;
+
+            var scale = delta > 0 ? 1.1 : 0.9;
+            lightboxImg.style.width = lightboxImg.clientWidth * scale + 'px';
+            lightboxImg.style.height = lightboxImg.clientHeight * scale + 'px';
+
+            event.preventDefault();
+        }
+    </script>
+</body>
+
+</html>

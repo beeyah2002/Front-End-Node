@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Book</title>
-    <link rel="stylesheet" href="../css/style.css" >
+    <title>Update Band</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Update Book</h1>
-    <form method="post" action="/update/<%= book.id %> ">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" value="<%= book.title %>" >
-        <br>  
-        <label for="author">Author</label>
-        <input type="text" id="author" name="author" value="<%= book.author %>" >
-        <br>   
+    <h1>Update Band</h1>
+    <form method="post" action="/update/<%= band.ID %>">
+        <label for="Name">Name</label>
+        <input type="text" id="Name" name="Name" value="<%= band.Name %>">
+        <br><br>
+        <label for="Genre">Genre</label>
+        <input type="text" id="Genre" name="Genre" value="<%= band.Genre %>">
+        <br><br>
+        <label for="FormationYear">Formation Year</label>
+        <input type="number" id="FormationYear" name="FormationYear" value="<%= band.FormationYear %>">
+        <br><br>
+        <label for="Pic">Picture</label>
+        <input type="file" id="Pic" name="Pic">
+        <br><br>
         <input type="submit" value="Update">
+        <a href="/updatemember">
+            <button>update information</button>
+        </a>
     </form>
-    <a href="/book/<%= book.id %>" >View</a>
-    <a href="/delete/<%= book.id %>" >delete</a>
-    <a href="/">Back to list</a>
-
-</body>
-</html>
+    <a href="/band/<%= band.id %>">View</a>
+    <a href="/delete/<%= band.id %>">Delete</a>
+    <a href="/">Back to List</a>

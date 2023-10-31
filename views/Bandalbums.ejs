@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Album</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Band and album</h1>
+    <table>
+        <tr>
+            <th>Band </th>
+            
+            <th>Album </th>
+            
+            <th>Actions</th>
+        </tr>
+        <% for (var i = 0; i < Bandalbums.length; i++) { %>
+            <tr>
+                <td><%= Bandalbums[i].bandID ? Band[Bandalbums[i].bandID].Name : '' %></td>
+               
+                
+                <td><%= Bandalbums[i].albumID ? Album[Bandalbums[i].albumID].Albumname : '' %></td>
+                
+                
+                <td class="actions">
+                    <a href="/Bandalbum/<%= Bandalbums[i].ID %>">View</a>
+                    <a href="/updateBandalbum/<%= Bandalbums[i].ID %>">Update</a>
+                    <a href="/deleteBandalbum/<%= Bandalbums[i].ID %>">Delete</a>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+    <div class="middle">
+        <div class="link-container">
+            <a href="/createbandalbum" class="create-link">Create Bandalbum</a>
+            <a href="/Bands" class="create-link">Add Band</a>
+            <a href="/Albums" class="create-link">Add Album</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>View Doctor</h1>
+    <table class="Doctor-table">
+        <tr>
+            
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Formation Year</th>
+            <th>Member</th>
+            <th>Pic</th>
+        </tr>
+        <tr>
+            
+            <td><%= Band.Name %></td>
+            <td><%= Band.Genre %></td>
+            <td><%= Band.FormationYear %></td>
+            <td><%= Band.Member %></td>
+            <td><%= Band.Pic %></td>
+            <td>
+                <img onclick="openLightbox(this)" src="<%= Band.Pic %>" alt="Band Pic">
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                    <img id="lightbox-img" src="<%= Band.Pic %>" alt="Band Pic">
+                </div>
+            </td>  
+        </tr>
+    </table>
+    <div class="link-center">
+        <a href="/updateband/<%= Band.ID %>">Edit</a>
+        <a href="/updateband/<%= Band.ID %>">Delete</a>
+        <a href="/Bands">Back to List</a>
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+
+            lightbox.style.display = 'flex';
+            lightboxImg.src = element.src;
+
+            window.addEventListener('wheel', zoomImage);
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            window.removeEventListener('wheel', zoomImage);
+        }
+
+        function zoomImage(event) {
+            var lightboxImg = document.getElementById('lightbox-img');
+            var delta = event.deltaY || event.detail || event.wheelDelta;
+
+            var scale = delta > 0 ? 1.1 : 0.9;
+            lightboxImg.style.width = lightboxImg.clientWidth * scale + 'px';
+            lightboxImg.style.height = lightboxImg.clientHeight * scale + 'px';
+
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

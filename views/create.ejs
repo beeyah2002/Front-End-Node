@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create book</title>
-    <link rel="stylesheet" href="../css/style.css" >
+    <title>Create Band</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Create book</h1>
+    <h1>Create Band</h1>
     <form method="post" action="/create">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name">
         <br>
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author">
+        <label for="Genre">Genre:</label>
+        <input type="text" id="Genre" name="Genre">
         <br>
-        <input type="submit" value="create">
+        <label for="FormationYear">Formation Year:</label>
+        <input type="number" id="FormationYear" name="FormationYear">
+        <br>
+        <input type="submit" value="Create">
+        <a href="/createmember">Create information</a>
     </form>
-    <a href="/">back to list</a>
+    <div class="middle">
+    <a href="/">Back to List</a>
+    </div>
 </body>
 </html>

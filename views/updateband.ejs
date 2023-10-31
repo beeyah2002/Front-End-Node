@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <body>
+        <h1>Update Band</h1>
+        <form method="post" action="/updateband/<%= Band.ID %>">
+            <label for="Name">Name</label>
+            <input type="text" id="Name" name="Name" value="<%= Band.Name %>">
+            <br>
+            <label for="Genre">Genre</label>
+            <input type="text" id="Genre" name="Genre" value="<%= Band.Genre %>">
+            <br>
+            <label for="FormationYear">FormationYear</label>
+            <input type="text" id="FormationYear" name="FormationYear" value="<%= Band.FormationYear %>">
+            <br>
+            <label for="Member">Member</label>
+            <input type="text" id="Member" name="Member" value="<%= Band.Member %>">
+            <br>
+            <label for="Pic">Pic</label>
+            <input type="file" id="Pic" name="Pic" value="<%= Band.Pic %>">
+            <br>
+            <input type="submit" value="Update">
+        </form>
+    
+    <a href="/Deleteband/<%= Band.ID %>">Delete</a>
+    <a href="/Bands">Back to List</a>
+    </body>
+    <script>
+        document.getElementById('Pic').addEventListener('change', function (e) {
+            var preview = document.getElementById('preview');
+            preview.style.display = 'block';
+            preview.src = URL.createObjectURL(e.target.files[0]);
+        });
+    </script>
+</html>
