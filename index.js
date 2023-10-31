@@ -17,11 +17,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/Bands', async (req, res) => {
     try{
         const response = await axios.get(base_url + '/Band');
-        res.render('Bands', {  
-            Bands: response.data,
-            
-            
-        });
+        res.render('Bands', {  Bands: response.data, });
     } catch (err) {
         console.log(err);
         res.status(500).send('err');
