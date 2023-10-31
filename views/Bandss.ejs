@@ -26,7 +26,7 @@
                 <td><%= Bandss[i].Genre %></td>
                 <td><%= Bandss[i].FormationYear %></td>
                 <td><%= Bandss[i].Member %></td>
-                <td><img src="<%= Bandss[i].Pic %>" alt="Band Pic"></td>
+                <td><img src="<%= Bandss[i].Pic %>" alt="Band Pic" width="200" height="150"></td>
                 <td class="actions">
                     <a href="/updateband/<%= Bandss[i].ID %>">Update</a>
                     <a href="/deleteband/<%= Bandss[i].ID %>">Delete</a>
@@ -37,7 +37,7 @@
     <div class="middle">
         
         
-        <a href="/createBand" class="create-link">Create New Bandss</a>
+        <a href="/createBand" class="create-link">Create New Bands</a>
         <br>
         <a href="/" class="create-link">View Band</a>
         <br>
