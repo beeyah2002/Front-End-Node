@@ -14,10 +14,10 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/Bands', async (req, res) => {
+app.get('/Bandss', async (req, res) => {
     try{
         const response = await axios.get(base_url + '/Band');
-        res.render('Bands', {  Bands: response.data, });
+        res.render('Bandss', {  Bandss: response.data, });
     } catch (err) {
         console.log(err);
         res.status(500).send('err');
@@ -43,7 +43,7 @@ app.post("/createBand", async (req, res) => {
     try {
         const data = { Name: req.body.Name, Genre: req.body.Genre,  FormationYear: req.body.FormationYear, Member : req.body.Member, Pic: req.body.Pic };
         await axios.post(base_url + '/Band', data);
-        res.redirect("/Bands"); 
+        res.redirect("/Bandss"); 
     } catch (err) {
         console.error(err);
         res.status(500).send('err');
@@ -65,7 +65,7 @@ app.post("/updateband/:ID", async (req, res) => {
     try {
         const data = { Name: req.body.Name, Genre: req.body.Genre,  FormationYear: req.body.FormationYear, Member : req.body.Member, Pic: req.body.Pic };
         await axios.put(base_url + '/Band/' + req.params.ID, data);
-        res.redirect("/Bands");
+        res.redirect("/Bandss");
     } catch (err) {
         console.error(err);
         res.status(500).send('err');
@@ -75,7 +75,7 @@ app.post("/updateband/:ID", async (req, res) => {
 app.get("/deleteband/:ID", async (req, res) => {
     try {
         await axios.delete(base_url + '/Band/' + req.params.ID);
-            res.redirect("/Bands");
+            res.redirect("/Bandss");
     } catch (err) {
         console.error(err);
         res.status(500).send('err');
