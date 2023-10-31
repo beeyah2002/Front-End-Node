@@ -39,6 +39,7 @@ app.get("/Band/:ID", async (req, res) => {
 });
 
 app.get("/createBand", (req, res) => {
+    
     res.render('createBand');
 });
 
