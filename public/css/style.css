@@ -143,4 +143,8 @@ form {
     border-radius: 5px;
     margin-top: 10px;
   }
+  .img{
+  width: 200px; /* รูปภาพจะมีความกว้าง 200 พิกเซล */
+  height: 150px; /* รูปภาพจะมีความสูง 150 พิกเซล */
+  }
   
