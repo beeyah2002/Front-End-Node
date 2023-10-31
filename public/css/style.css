@@ -22,14 +22,14 @@ body {
   }
   
   th, td {
-    border: 1px solid #d882e9;
+    border: 1px solid #171010;
     padding: 12px;
     
     
   }
   
   th {
-    background-color: #d882e9;
+    background-color: #2C3E50;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
