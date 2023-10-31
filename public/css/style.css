@@ -36,7 +36,7 @@ body {
   }
   
   tr:nth-child(even) {
-    background-color: #d882e9;
+    background-color: #f5f5f5;
   }
   
 /* Style the form */
