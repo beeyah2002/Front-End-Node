@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Bands</h1>
+    <h1>Bandss</h1>
     <table>
         <tr>
             
@@ -19,17 +19,17 @@
 
             <th>Actions</th>
         </tr>
-        <% for (let i = 0; i < Bands.length; i++) { %>
+        <% for (let i = 0; i < Bandss.length; i++) { %>
             <tr>
                 
-                <td><%= Bands[i].Name %></td>
-                <td><%= Bands[i].Genre %></td>
-                <td><%= Bands[i].FormationYear %></td>
-                <td><%= Bands[i].Member %></td>
-                <td><img src="<%= Bands[i].Pic %>" alt="Band Pic"></td>
+                <td><%= Bandss[i].Name %></td>
+                <td><%= Bandss[i].Genre %></td>
+                <td><%= Bandss[i].FormationYear %></td>
+                <td><%= Bandss[i].Member %></td>
+                <td><img src="<%= Bandss[i].Pic %>" alt="Band Pic"></td>
                 <td class="actions">
-                    <a href="/updateband/<%= Bands[i].ID %>">Update</a>
-                    <a href="/deleteband/<%= Bands[i].ID %>">Delete</a>
+                    <a href="/updateband/<%= Bandss[i].ID %>">Update</a>
+                    <a href="/deleteband/<%= Bandss[i].ID %>">Delete</a>
                 </td>
             </tr>
         <% } %>
@@ -37,7 +37,7 @@
     <div class="middle">
         
         
-        <a href="/createBand" class="create-link">Create New Bands</a>
+        <a href="/createBand" class="create-link">Create New Bandss</a>
         <br>
         <a href="/" class="create-link">View Band</a>
         <br>
