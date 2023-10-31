@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const base_url = 'https://node51706-beeyah.proen.app.ruk-com.cloud'; // Assuming your first code listens on port 7000
+const base_url = 'http://node51706-beeyah.proen.app.ruk-com.cloud'; // Assuming your first code listens on port 7000
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
