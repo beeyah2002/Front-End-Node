@@ -24,8 +24,8 @@ body {
   th, td {
     border: 1px solid #171010;
     padding: 12px;
-    text-align: center;
-    white-space: pre-wrap;
+    
+    
   }
   
   th {
@@ -150,12 +150,18 @@ form {
   height: 150px; /* รูปภาพจะมีความสูง 150 พิกเซล */
   object-fit: contain;
   border-radius: 5px;
-  }
+  display: block; /* ทำให้รูปภาพเป็นองค์ประกอบแบล็ก */
+  margin: 0 auto; /* จัดให้รูปภาพอยู่ตรงกลางในพื้นที่ที่กำหนด */
+  border-radius: 5px; /* เพิ่มมุมโค้งเข้าไป */
+}
 .img{
    width: 150px; /* รูปภาพจะมีความกว้าง 200 พิกเซล */
   height: 150px; /* รูปภาพจะมีความสูง 150 พิกเซล */
   object-fit: contain;
   border-radius: 5px;
+  display: block; /* ทำให้รูปภาพเป็นองค์ประกอบแบล็ก */
+  margin: 0 auto; /* จัดให้รูปภาพอยู่ตรงกลางในพื้นที่ที่กำหนด */
+  border-radius: 5px; /* เพิ่มมุมโค้งเข้าไป */
 }
 .left{
   text-align: center;
