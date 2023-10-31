@@ -128,8 +128,8 @@ form {
   }
   
   th, td {
-    text-align: left;
-    padding: 16px;
+    text-align: center;
+    padding: 10px;
   }
   .middle {
     text-align: center;
@@ -148,7 +148,7 @@ form {
   .img{
   width: 200px; /* รูปภาพจะมีความกว้าง 200 พิกเซล */
   height: 150px; /* รูปภาพจะมีความสูง 150 พิกเซล */
-  object-fit: cover;
-    border-radius: 5px;
+  object-fit: contain;
+  border-radius: 5px;
   }
   
