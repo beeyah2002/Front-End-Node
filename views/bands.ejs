@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band</title>
+    <title>Album</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Bands</h1>
+    <h1>Album</h1>
     <table>
         <tr>
             
-            <th>Name</th>
-            <th>Genre</th>
-            <th>Formation Year</th>
-            <th>Member</th>
-            <th>Picture</th>
-
+            <th>Album Name</th>
+            <th>Year</th>
+            <th>Song</th>
+            <th>Pic</th>
             <th>Actions</th>
         </tr>
-        <% for (let i = 0; i < Bands.length; i++) { %>
+        <% for (var i = 0; i < Albums.length; i++) { %>
             <tr>
-                
-                <td><%= Bands[i].Name %></td>
-                <td><%= Bands[i].Genre %></td>
-                <td><%= Bands[i].FormationYear %></td>
-                <td><%= Bands[i].Member %></td>
-                <td><img src="<%= Bands[i].Pic %>" alt="Band Pic"></td>
+                <td><%= Albums[i].Albumname %></td>
+                <td><%= Albums[i].Year%></td>
+                <td><%= Albums[i].Song %></td>
+                <td><img src="<%= Albums[i].Pic %>" alt="Album Pic"></td>
                 <td class="actions">
-                    <a href="/updateband/<%= Bands[i].ID %>">Update</a>
-                    <a href="/deleteband/<%= Bands[i].ID %>">Delete</a>
+                    <a href="/updatealbum/<%= Albums[i].ID %>">Update</a>
+                    <a href="/deletealbum/<%= Albums[i].ID %>">Delete</a>
                 </td>
             </tr>
         <% } %>
     </table>
     <div class="middle">
-        
-        
-        <a href="/createBand" class="create-link">Create New Bands</a>
+       
+        <a href="/createalbum"class="create-link">Create New album</a>
         <br>
-        <a href="/" class="create-link">View Band</a>
+        <a href="/" class="create-link">View Band and Album</a>
         <br>
-        <a href="/Albums" class="create-link">View Album</a>
+        <a href="/Bands" class="create-link">View Band</a>
         <br>
         
     </div>
