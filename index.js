@@ -191,7 +191,7 @@ app.get("/createbandalbum", (req, res) => {
 
 app.post("/createbandalbum", async (req, res) => {
     try {
-        const data = {  bandID: req.body.bandID, albumID: req.body.albumID };
+        const data = {  bandID: req.body.bandID - 1, albumID: req.body.albumID - 1 };
         await axios.post(base_url + '/Bandalbum', data);
         res.redirect("/"); 
     } catch (err) {
@@ -213,7 +213,7 @@ app.get("/updatebandalbum/:ID", async (req, res) => {
 
 app.post("/updatebandalbum/:ID", async (req, res) => {
     try {
-        const data = { bandID: req.body.bandID, albumID: req.body.albumID };
+        const data = { bandID: req.body.bandID - 1, albumID: req.body.albumID - 1 };
         await axios.put(base_url + '/Bandalbum/' + req.params.ID, data);
         res.redirect("/");
     } catch (err) {
