@@ -23,7 +23,7 @@
                 <td><%= Bandalbums[i-1].bandID ? Band[Bandalbums[i].bandID].Name : '' %></td>
                
                 
-                <td><%= Bandalbums[i].albumID ? Album[Bandalbums[i].albumID].Albumname : '' %></td>
+                <td><%= Bandalbums[i-1].albumID ? Album[Bandalbums[i].albumID].Albumname : '' %></td>
                 
                 
                 <td class="actions">
