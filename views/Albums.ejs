@@ -10,7 +10,7 @@
     <h1>Album</h1>
     <table>
         <tr>
-            
+            <th>ID</th>
             <th>Album Name</th>
             <th>Year</th>
             <th>Song</th>
@@ -19,6 +19,7 @@
         </tr>
         <% for (var i = 0; i < Albums.length; i++) { %>
             <tr>
+                <td><%= Albums[i].ID %></td>
                 <td><%= Albums[i].Albumname %></td>
                 <td><%= Albums[i].Year%></td>
                 <td><%= Albums[i].Song %></td>
