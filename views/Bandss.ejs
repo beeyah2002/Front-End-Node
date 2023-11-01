@@ -15,7 +15,7 @@
             <th>Genre</th>
             <th>Formation Year</th>
             <th>Member</th>
-            <th>Picture</th>
+            
 
             <th>Actions</th>
         </tr>
@@ -27,7 +27,7 @@
                 <td><%= Bandss[i].Genre %></td>
                 <td><%= Bandss[i].FormationYear %></td>
                 <td><%= Bandss[i].Member %></td>
-                <td><img src="<%= Bandss[i].Pic %>" alt="Band Pic" width="200" height="200"></td>
+                
                 <td class="actions">
                     <a href="/updateband/<%= Bandss[i].ID %>">Update</a>
                     <a href="/deleteband/<%= Bandss[i].ID %>">Delete</a>
