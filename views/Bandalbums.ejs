@@ -19,8 +19,8 @@
         </tr>
         <% for (var i = 0; i < Bandalbums.length; i++) { %>
             <tr>
-                <td><%= Bandalbums[i].ID %></td>
-                <td><%= Bandalbums[i].bandID ? Band[Bandalbums[i].bandID].Name : '' %></td>
+                <td><%= Bandalbums[i-1].ID %></td>
+                <td><%= Bandalbums[i-1].bandID ? Band[Bandalbums[i].bandID].Name : '' %></td>
                
                 
                 <td><%= Bandalbums[i].albumID ? Album[Bandalbums[i].albumID].Albumname : '' %></td>

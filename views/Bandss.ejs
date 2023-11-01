@@ -21,11 +21,11 @@
         </tr>
         <% for (let i = 0; i < Bandss.length; i++) { %>
             <tr>
-                <td><%= Bandss[i].ID %></td>
-                <td><%= Bandss[i].Name %></td>
-                <td><%= Bandss[i].Genre %></td>
-                <td><%= Bandss[i].FormationYear %></td>
-                <td><%= Bandss[i].Member %></td>
+                <td><%= Bandss[i-1].ID %></td>
+                <td><%= Bandss[i-1].Name %></td>
+                <td><%= Bandss[i-1].Genre %></td>
+                <td><%= Bandss[i-1].FormationYear %></td>
+                <td><%= Bandss[i-1].Member %></td>
                 <td><img src="<%= Bandss[i].Pic %>" alt="Band Pic" width="200" height="200"></td>
                 <td class="actions">
                     <a href="/updateband/<%= Bandss[i].ID %>">Update</a>
