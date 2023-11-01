@@ -10,6 +10,7 @@
     <h1>Band and album</h1>
     <table>
         <tr>
+            <th>ID</th>
             <th>Band </th>
             
             <th>Album </th>
@@ -18,6 +19,7 @@
         </tr>
         <% for (var i = 0; i < Bandalbums.length; i++) { %>
             <tr>
+                <td><%= Bandalbums[i].ID %></td>
                 <td><%= Bandalbums[i].bandID ? Band[Bandalbums[i].bandID].Name : '' %></td>
                
                 

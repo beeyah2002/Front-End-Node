@@ -10,7 +10,7 @@
     <h1>Band</h1>
     <table>
         <tr>
-            
+            <th>ID</th>
             <th>Name</th>
             <th>Genre</th>
             <th>Formation Year</th>
@@ -21,7 +21,7 @@
         </tr>
         <% for (let i = 0; i < Bandss.length; i++) { %>
             <tr>
-                
+                <td><%= Bandss[i].ID %></td>
                 <td><%= Bandss[i].Name %></td>
                 <td><%= Bandss[i].Genre %></td>
                 <td><%= Bandss[i].FormationYear %></td>
