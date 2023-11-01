@@ -17,7 +17,7 @@
             
             <th>Actions</th>
         </tr>
-        <% for (var i = 0; i < Bandalbums.length; i++) { %>
+        <% for (var i = 1; i < Bandalbums.length; i++) { %>
             <tr>
                 <td><%= Bandalbums[i-1].ID %></td>
                 <td><%= Bandalbums[i-1].bandID ? Band[Bandalbums[i].bandID].Name : '' %></td>
