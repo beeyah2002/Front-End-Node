@@ -17,12 +17,12 @@
             <th>Pic</th>
             <th>Actions</th>
         </tr>
-        <% for (var i = 1; i <= Albums.length; i++) { %>
+        <% for (var i = 0; i <= Albums.length; i++) { %>
             <tr>
-                <td><%= Albums[i-1].ID %></td>
-                <td><%= Albums[i-1].Albumname %></td>
-                <td><%= Albums[i-1].Year%></td>
-                <td><%= Albums[i-1].Song %></td>
+                <td><%= Albums[i].ID %></td>
+                <td><%= Albums[i].Albumname %></td>
+                <td><%= Albums[i].Year%></td>
+                <td><%= Albums[i].Song %></td>
                 <td><img src="<%= Albums[i].Pic %>" alt="Album Pic" width="200" height="200"></td>
                 <td class="actions">
                     <a href="/updatealbum/<%= Albums[i].ID %>">Update</a>
